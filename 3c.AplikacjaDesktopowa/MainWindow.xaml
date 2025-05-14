@@ -1,0 +1,31 @@
+﻿<Window x:Class="_3c.AplikacjaDesktopowa.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_3c.AplikacjaDesktopowa"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="Pliki">
+                    <MenuItem Header="Otwórz" Click="OpenClick"/>
+                    <MenuItem Header="Zapisz" Click="SaveClick"/>
+                    <MenuItem Header="Zapisz jako" Click="SaveAsClick"/>
+                </MenuItem>
+                <MenuItem Header="_Opcje">
+                    <MenuItem Header="Czcionka"></MenuItem>
+                    
+                </MenuItem>
+    
+            </Menu>
+            <StackPanel></StackPanel>
+        </DockPanel>
+        <DockPanel LastChildFill="False"/>
+        <TextBox x:Name="mainTextBox" Margin="0,22,0,0">
+            
+        </TextBox>
+
+    </Grid>
+</Window>

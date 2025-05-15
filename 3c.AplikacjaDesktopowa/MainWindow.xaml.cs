@@ -1,17 +1,8 @@
-﻿using System;
+﻿using System.Drawing;
 using System.IO;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using Microsoft.Win32;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace _3c.AplikacjaDesktopowa
 {
@@ -79,13 +70,6 @@ namespace _3c.AplikacjaDesktopowa
         
         }
 
-        //OpenFileDialog openFileDialog = new OpenFileDialog();
-        //SaveFileDialog saveFileDialog = new SaveFileDialog();
-        //StreamWriter writer = new StreamWriter(path);
-        //StreamReader streamReader = new StreamReader(path);
-
-
-
         private void OpenClick(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -102,6 +86,23 @@ namespace _3c.AplikacjaDesktopowa
             {
                 mainTextBox.Text = streamReader.ReadToEnd();
             }
+        }
+        private void ZmienKolorNaCzerwony_Click(object sender, RoutedEventArgs e)
+        {
+            mainTextBox.Foreground = Brushes.Red;
+        }
+
+        private void ZmienKolorNaCzarny_Click(object sender, RoutedEventArgs e)
+        {
+            mainTextBox.Foreground = Brushes.Black;
+        }
+
+        private void WybierzKolor_Click(object sender, RoutedEventArgs e)
+        {
+            ColorSelectionWindow newWindow = new ColorSelectionWindow();
+            newWindow.ShowDialog();
+            SolidColorBrush brush = new SolidColorBrush(newWindow.color);
+            mainTextBox.Foreground = brush;
         }
     }
 }

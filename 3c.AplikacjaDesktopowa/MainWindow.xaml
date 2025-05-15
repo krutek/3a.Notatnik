@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_3c.AplikacjaDesktopowa"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Notatnik" Height="450" Width="800">
     <Grid>
         <DockPanel>
             <Menu DockPanel.Dock="Top">
@@ -14,9 +14,13 @@
                     <MenuItem Header="Zapisz" Click="SaveClick"/>
                     <MenuItem Header="Zapisz jako" Click="SaveAsClick"/>
                 </MenuItem>
-                <MenuItem Header="_Opcje">
+                <MenuItem Header="Opcje">
                     <MenuItem Header="Czcionka"></MenuItem>
-                    
+                    <MenuItem Header="Kolor czcionki" >
+                        <MenuItem Header="Czerwony" Click="ZmienKolorNaCzerwony_Click"></MenuItem>
+                        <MenuItem Header="Czarny" Click="ZmienKolorNaCzarny_Click" ></MenuItem>
+                        <MenuItem Header="Wybierz kolor" Click="WybierzKolor_Click" ></MenuItem>
+                    </MenuItem>
                 </MenuItem>
     
             </Menu>
